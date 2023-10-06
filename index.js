@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json())
 
-const port = 4000;
+const port = 5000;
 
 let data  = [
     {id: 1,year: 2021, model: 'ford' , price:10000, color: 'red'},
@@ -31,11 +31,10 @@ app.post('/', (req,res)=>{
         data.push(newCar)
         res.json({"data": data})
 
-    console.log(req.body);
-    res.json({ "data": "si"})
+   
 })
 
-app.listen(5000, ()=>{
-    console.log('app listening  ${port}')
+app.listen(port, ()=>{
+    console.log(`app listening  ${port}`)
 })
 
